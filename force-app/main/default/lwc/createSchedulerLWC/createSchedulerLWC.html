@@ -1,0 +1,30 @@
+<!--
+  @description       : Componente LWC para agendar sincronização
+  @author            : Jefferson Martins
+  @group             : 
+  @last modified on  : 12-28-2021
+  @last modified by  : Jefferson Martins
+-->
+<template>
+    <div>
+        <lightning-card>
+            <h3 slot="title">
+                <lightning-icon icon-name="utility:clock" size="small"></lightning-icon>
+                 Set Synchronization Execution Time
+            </h3>
+            <p class="slds-p-horizontal_small">
+            <lightning-input 
+                type="time" 
+                name="schedulerTimer" 
+                label="Enter the time for sync" required
+                value=""
+                placeholder="hh:mm"
+                onchange={handleInputTimeChange}>
+            </lightning-input>
+            </p>
+            <div slot="footer">
+                <lightning-button variant="brand" label="Create" title="Create Scheduler" onclick={handleSchedulerClick} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </lightning-card>
+    </div>
+</template>
